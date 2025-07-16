@@ -1,0 +1,29 @@
+#数据时间
+start_date: "2025-01-20"
+end_date: "2025-01-22"
+# 模型选择
+checkpoint: "./results/informer_B15_ftMS_sl24_ll12_pl4_dm512_nh8_el3_dl3_df2048_atprob_fc5_ebtimeF_dtTrue_mxTrue_exp_3_0/"
+# 站点名,若组网计算需要至少三台
+site_names:
+  - "B84"
+  - "B70"
+  
+# 设备站点经纬度，顺序与上述站点名一致
+site_coordinates:
+  - [40.7128, -74.0060]  
+  - [34.0522, -118.2437]
+  - [51.5074, -0.1278]
+
+# 参考站点数据文件路径，组网计算至少需要三个站点
+reference_data_path: 
+  - "/path/to/reference_data1"
+  - "/path/to/reference_data2"
+  - "/path/to/reference_data3"
+
+# 参考站点经纬度，顺序与上述参考站点数据文件一致
+reference_site_coordinates:
+  - [40.7306, -73.9352]
+  - [34.0522, -118.2437]
+
+# 预测结果单次预测长度，1by1,4by4,8by8,12by12,单位15min
+predata_type: "12by12"
